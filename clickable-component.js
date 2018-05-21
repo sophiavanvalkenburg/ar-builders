@@ -7,16 +7,16 @@ AFRAME.registerComponent('log-on-click', {
       builders.forEach(function(builder) {
       	if (el.id === builder.name) {
       		if (searchForBuilderTool(builder)){
-      			console.log('Thanks for finding my tool');
+      			toggleSpeechBubble('Thanks for finding my tool');
       		} else {
-      			console.log(builder.dialogue);
+      			toggleSpeechBubble(builder.dialogue);
       		}
       	}
       });
 
       tools.forEach(function(tool){
       	if (el.id === tool.id) {
-      		console.log(tool.dialogue);
+      		toggleSpeechBubble(tool.dialogue);
       	}
       });
 
@@ -24,8 +24,17 @@ AFRAME.registerComponent('log-on-click', {
   }
 });
 
+function toggleSpeechBubble(dialogue) {
+	if (speechBubble.style.display === 'none' || !speechBubble.style.display) {
+		speechBubble.innerHTML = dialogue;
+		speechBubble.style.display = 'block';
+	} else {
+		speechBubble.style.display = 'none';
+	}
+};
+
 function searchForBuilderTool(builder) {
 	userState.tools.some(function(tool) {
 		return tool.name === builder.tool.name;
 	});
-}
+};
