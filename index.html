@@ -12,10 +12,9 @@
     <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
       <a-assets>
         <a-asset-item id="pyra-obj" src="builder-models/Pyra.obj"></a-asset-item>
-        <a-asset-item id="pyra-mtl" src="builder-models/Pyra.mtl"></a-asset-item>
       </a-assets>
       <a-marker id="pyra-marker" type="pattern" url="ddr.patt">
-        <a-entity id="pyra" obj-model="obj: #pyra-obj; mtl: #pyra-mtl" rotation="0 0 180" position="0 -1 0" scale="0.25 0.25 0.25"></a-entity>
+        <a-entity id="pyra" obj-model="obj: #pyra-obj;" material="color: green" rotation="0 0 180" scale="0.25 0.25 0.25"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
