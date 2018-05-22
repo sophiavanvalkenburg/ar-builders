@@ -1,12 +1,16 @@
 .speech-bubble {
-    position: absolute;
-    top: 10px;
+	position: absolute;
+	width: 90%;
+	margin: 0 auto;
+	bottom: 100px;
     right: 10px;
-    min-height: 25px;
-	background: #00aabb;
+    min-height: 30%;
+	background: #004431;
+	color: #0f4;
+	font-size: 96px;
     border-radius: .4em;
-    padding: 5px;
-    display: none;
+    padding: 20px;
+    /* display: none; */
 }
 
 .speech-bubble:after {
@@ -16,12 +20,12 @@
 	left: 50%;
 	width: 0;
 	height: 0;
-	border: 25px solid transparent;
-	border-top-color: #00aabb;
+	border: 100px solid transparent;
+	border-top-color: #004431;
 	border-bottom: 0;
 	border-left: 0;
-	margin-left: -25px;
-	margin-bottom: -25px;
+	margin-left: -100px;
+	margin-bottom: -100px;
 }
 
 #arjsDebugUIContainer {
