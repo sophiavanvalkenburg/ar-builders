@@ -10,7 +10,7 @@
 	font-size: 96px;
     border-radius: .4em;
     padding: 20px;
-    /* display: none; */
+    display: none;
 }
 
 .speech-bubble:after {
