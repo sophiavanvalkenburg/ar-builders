@@ -8,13 +8,29 @@
   <script src="js/userState.js"></script>
   <script src="js/interaction.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
-    <div class='speech-bubble'>Hi! I want my Hammer!!!!</div>
+    <div class='speech-bubble'></div>
     <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
       <a-assets>
         <a-asset-item id="pyra-obj" src="builder-models/Pyra.obj"></a-asset-item>
+        <a-asset-item id="biggie-obj" src="builder-models/Biggie.obj"></a-asset-item>
+        <a-asset-item id="frenchie-obj" src="builder-models/Frenchie.obj"></a-asset-item>
+        <a-asset-item id="toob-obj" src="builder-models/Toob.obj"></a-asset-item>
+        <a-asset-item id="lil-obj" src="builder-models/Lil.obj"></a-asset-item>
       </a-assets>
-      <a-marker id="pyra-marker" type="pattern" url="ddr.patt">
-        <a-entity id="pyra" obj-model="obj: #pyra-obj;" material="color: green" rotation="0 0 180" scale="0.25 0.25 0.25"></a-entity>
+      <a-marker id="pyra-marker" type="pattern" url="builder-markers/pyra.patt">
+        <a-entity id="pyra" obj-model="obj: #pyra-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="biggie-marker" type="pattern" url="builder-markers/biggie.patt">
+        <a-entity id="biggie" obj-model="obj: #biggie-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="frenchie-marker" type="pattern" url="builder-markers/frenchie.patt">
+        <a-entity id="frenchie" obj-model="obj: #frenchie-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="toob-marker" type="pattern" url="builder-markers/toob.patt">
+        <a-entity id="toob" obj-model="obj: #toob-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="lil-marker" type="pattern" url="builder-markers/lil.patt">
+        <a-entity id="lil" obj-model="obj: #lil-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
