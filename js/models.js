@@ -30,14 +30,35 @@ function Tool(name, dialogue) {
 Tool.prototype = Object.create(ARModel.prototype);
 
 function initiateModels() {
-    var buildersArray = [{
+    var buildersArray = [
+      {
         name: 'pyra',
-        dialogue: 'Hi there!',
+        dialogue: 'Hi there, I\'m Pyra! I\'ve lost my hammer. Let me know if you see it!',
         tool: new Tool('hammer', 'You have found Pyra\'s hammer!')
-    }];
+      },
+      {
+        name: 'biggie',
+        dialogue: 'Hey, I\'m Biggie! I left my blocks somewhere in the office... can you help me find it?',
+        tool: new Tool('building-blocks', 'You have found Biggie\'s blocks!')
+      },
+      {
+        name: 'frenchie',
+        dialogue: 'Je suis Frenchie! I\'ve misplaced my favorite builder hat right before the party. Merde!',
+        tool: new Tool('builder-hat', 'You have found Frenchie\'s hat!')
+      },
+      {
+        name: 'lil',
+        dialogue: 'I\'m short so they call me Lil! I have to finish my project, but I can\'t find my screwdriver...',
+        tool: new Tool('screwdriver', 'You have found Lil\'s screwdriver!')
+      },
+      {
+        name: 'toob',
+        dialogue: 'Pleased Toob meet you... haha... see what I did there? By the way, have you seen my wrench?',
+        tool: new Tool('wrench', 'You have found Toob\'s wrench!')
+      }];
 
     buildersArray.forEach(function(builder){
-        builders.push(new Builder(builder.name, builder.dialogue, builder.tool))
+        builders.push(new Builder(builder.name, builder.dialogue, builder.tool));
         tools.push(builder.tool);
     });
 }
