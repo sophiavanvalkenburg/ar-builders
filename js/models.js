@@ -14,10 +14,10 @@ ARModel.prototype.speak = function() {
 }
 
 //Builder model
-function Builder(name, dialogue, tool) {
+function Builder(name, dialogue, tool, successDialogue) {
     ARModel.call(this, name, dialogue);
     this.tool = tool;
-    this.hasTool = false;
+    this.successDialogue = successDialogue;
 }
 
 Builder.prototype = Object.create(ARModel.prototype);
@@ -34,33 +34,41 @@ function initiateModels() {
       {
         name: 'pyra',
         dialogue: 'Hi there, I\'m Pyra! I\'ve lost my hammer. Let me know if you see it!',
-        tool: new Tool('hammer', 'You have found Pyra\'s hammer!')
+        tool: new Tool('hammer', 'You have found Pyra\'s hammer!'),
+        successDialogue: 'Thanks for my hammer!'
       },
       {
         name: 'biggie',
         dialogue: 'Hey, I\'m Biggie! I left my blocks somewhere in the office... can you help me find it?',
-        tool: new Tool('building-blocks', 'You have found Biggie\'s blocks!')
+        tool: new Tool('building-blocks', 'You have found Biggie\'s blocks!'),
+        successDialogue: 'My blocks have been found!'
       },
       {
         name: 'frenchie',
         dialogue: 'Je suis Frenchie! I\'ve misplaced my favorite builder hat right before the party. Merde!',
-        tool: new Tool('builder-hat', 'You have found Frenchie\'s hat!')
+        tool: new Tool('builder-hat', 'You have found Frenchie\'s hat!'),
+        successDialogue: 'Merci!'
       },
       {
         name: 'lil',
         dialogue: 'I\'m short so they call me Lil! I have to finish my project, but I can\'t find my screwdriver...',
-        tool: new Tool('screwdriver', 'You have found Lil\'s screwdriver!')
+        tool: new Tool('screwdriver', 'You have found Lil\'s screwdriver!'),
+        successDialogue: 'Thanks for the screwdriver!'
       },
       {
         name: 'toob',
         dialogue: 'Pleased Toob meet you... haha... see what I did there? By the way, have you seen my wrench?',
-        tool: new Tool('wrench', 'You have found Toob\'s wrench!')
+        tool: new Tool('wrench', 'You have found Toob\'s wrench!'),
+        successDialogue: 'Thanks for finding my wench!'
       }];
 
     buildersArray.forEach(function(builder){
         builders.push(new Builder(builder.name, builder.dialogue, builder.tool));
         tools.push(builder.tool);
     });
+
+    console.log('builders', builders);
+    console.log('tools', tools)
 }
 
 initiateModels();

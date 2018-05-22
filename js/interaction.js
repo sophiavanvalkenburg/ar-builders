@@ -10,7 +10,7 @@ function handleClickEvent() {
     var builderMarker = document.querySelector("#" + builder.name + "-marker");
     if (builderMarker && builderMarker.object3D.visible) {
       if (searchForBuilderTool(builder)){
-        toggleSpeechBubble('Thanks for finding my tool');
+        toggleSpeechBubble(builder.successDialogue);
       } else {
         toggleSpeechBubble(builder.dialogue);
       }
