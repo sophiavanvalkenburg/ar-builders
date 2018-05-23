@@ -15,7 +15,7 @@ function hideSpeechBubbleIfNoMarker() {
   var shouldHide = true;
   builders.forEach(function(builder){
     var builderMarker = document.querySelector("#" + builder.name + "-marker");
-    if (builderMarker & builderMarker.object3D.visible) shouldHide = false;
+    if (builderMarker && builderMarker.object3D.visible) shouldHide = false;
   });
 
   tools.forEach(function(tool){
