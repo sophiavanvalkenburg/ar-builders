@@ -60,11 +60,16 @@ function initiateModels() {
         dialogue: 'Pleased Toob meet you... haha... see what I did there? By the way, have you seen my wrench?',
         tool: new Tool('wrench', 'You have found Toob\'s wrench!'),
         successDialogue: 'Thanks for finding my wrench!'
-      }];
+      },
+      {
+        name: 'demo',
+        dialogue: 'Meow! Welcome to CBRE Build.',
+      }
+    ];
 
     buildersArray.forEach(function(builder){
         builders.push(new Builder(builder.name, builder.dialogue, builder.tool, builder.successDialogue));
-        tools.push(builder.tool);
+        if (builder.tool) tools.push(builder.tool);
     });
 
     console.log('builders', builders);
