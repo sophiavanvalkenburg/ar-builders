@@ -40,13 +40,13 @@ function initiateModels() {
       {
         name: 'biggie',
         dialogue: 'Hey, I\'m Biggie! I left my blocks somewhere in the office... can you help me find it?',
-        tool: new Tool('building-blocks', 'You have found Biggie\'s blocks!'),
+        tool: new Tool('blocks', 'You have found Biggie\'s blocks!'),
         successDialogue: 'My blocks have been found!'
       },
       {
         name: 'frenchie',
         dialogue: 'Je suis Frenchie! I\'ve misplaced my favorite builder hat right before the party. Merde!',
-        tool: new Tool('builder-hat', 'You have found Frenchie\'s hat!'),
+        tool: new Tool('hat', 'You have found Frenchie\'s hat!'),
         successDialogue: 'Merci!'
       },
       {
@@ -59,7 +59,7 @@ function initiateModels() {
         name: 'toob',
         dialogue: 'Pleased Toob meet you... haha... see what I did there? By the way, have you seen my wrench?',
         tool: new Tool('wrench', 'You have found Toob\'s wrench!'),
-        successDialogue: 'Thanks for finding my wench!'
+        successDialogue: 'Thanks for finding my wrench!'
       }];
 
     buildersArray.forEach(function(builder){

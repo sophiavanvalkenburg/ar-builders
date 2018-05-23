@@ -18,7 +18,7 @@ function handleClickEvent() {
   });
 
   tools.forEach(function(tool){
-    var toolMarker = document.querySelector("#" + tool.id + "-marker");
+    var toolMarker = document.querySelector("#" + tool.name + "-marker");
     if (toolMarker && toolMarker.object3D.visible) {
       toggleSpeechBubble(tool.dialogue);
       if (!userState.hasBuilderTool(tool)) userState.addTool(tool);

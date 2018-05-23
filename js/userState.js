@@ -7,7 +7,7 @@ UserState.prototype.addTool = function(tool) {
 }
 
 UserState.prototype.hasBuilderTool = function(builder) {
-    return this.tools.includes(builder.tool.name);
+    return builder.tool && this.tools.includes(builder.tool.name);
 }
 
 var userState = new UserState();
