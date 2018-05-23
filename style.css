@@ -1,15 +1,16 @@
 .speech-bubble {
 	position: absolute;
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
-	bottom: 100px;
-    right: 10px;
-    min-height: 30%;
+	bottom: 50px;
+	right: 10px;
+	left: 10px;
+    min-height: 25%;
 	background: #004431;
 	color: #0f4;
-	font-size: 96px;
+	font-size: 36px;
     border-radius: .4em;
-    padding: 20px;
+	padding: 20px;
     display: none;
 }
 
@@ -20,12 +21,12 @@
 	left: 50%;
 	width: 0;
 	height: 0;
-	border: 100px solid transparent;
+	border: 50px solid transparent;
 	border-top-color: #004431;
 	border-bottom: 0;
 	border-left: 0;
-	margin-left: -100px;
-	margin-bottom: -100px;
+	margin-left: -50px;
+	margin-bottom: -50px;
 }
 
 #arjsDebugUIContainer {
