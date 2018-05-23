@@ -63,7 +63,7 @@ function initiateModels() {
       }];
 
     buildersArray.forEach(function(builder){
-        builders.push(new Builder(builder.name, builder.dialogue, builder.tool));
+        builders.push(new Builder(builder.name, builder.dialogue, builder.tool, builder.successDialogue));
         tools.push(builder.tool);
     });
 

@@ -3,7 +3,7 @@ function UserState() {
 }
 
 UserState.prototype.addTool = function(tool) {
-    this.tools.push(tool.name);
+    this.tools.push(tool);
 }
 
 UserState.prototype.hasBuilderTool = function(builder) {

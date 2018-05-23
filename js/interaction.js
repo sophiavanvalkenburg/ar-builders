@@ -37,7 +37,7 @@ function toggleSpeechBubble(dialogue) {
 };
 
 function searchForBuilderTool(builder) {
-	userState.tools.some(function(tool) {
-		return tool.name === builder.tool.name;
-	});
+  return userState.tools.some(function(tool) {
+    return tool.name === builder.tool.name;
+  });
 };
