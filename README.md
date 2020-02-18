@@ -1,4 +1,4 @@
-# AR Builders
+# AR Builders Treasure Hunt
 
 * Users visit different AR image markers around the office to see Builders in AR
 * When a user clicks a builder, the builder's dialogue appears
